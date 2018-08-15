@@ -11,9 +11,10 @@
 %     continuation: experimental set-up and measurement precision,” Inverse Probl. 21, (2005).
 
 clear
+addpath(genpath('../'));
 %% Figure 7
 
 
-load('FoamDielExtTM_3_GHz.mat');
+load('FoamDielExtTM_3_GHz_conj_1.mat');
 main_param_fig_7;
 main_lippmann;

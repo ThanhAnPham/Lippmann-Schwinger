@@ -32,7 +32,7 @@ clear par;
 %Dataset provided by
 %Jean-Michel Geffrin, Pierre Sabouroux and Christelle Eyraud, “Free space experimental scattering database
 %continuation: experimental set-up and measurement precision,” Inverse Probl. 21, (2005).
-load('FoamDielExtTM_3_GHz_conj_1.mat');
+%load('FoamDielExtTM_3_GHz_conj_1.mat');
 
 par.param_fname = strcat(mfilename(),'.m');
 %% Parameters

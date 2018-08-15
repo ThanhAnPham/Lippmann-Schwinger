@@ -2,7 +2,7 @@
 
 Matlab code for [1]
 
-The code requires the GlobalBioIm library [2] https://biomedical-imaging-group.github.io/GlobalBioIm/
+The code requires the GlobalBioIm library v1.1 [2] https://biomedical-imaging-group.github.io/GlobalBioIm/
 
 The script main_fig7 reproduces the figure 7 of the paper.
 

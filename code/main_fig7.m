@@ -11,7 +11,7 @@
 %     continuation: experimental set-up and measurement precision,” Inverse Probl. 21, (2005).
 
 clear
-addpath('../');
+addpath(genpath('../'));
 set(0,'DefaultTextInterpreter','LaTex');
 %% Figure 7
 

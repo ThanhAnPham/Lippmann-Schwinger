@@ -37,7 +37,7 @@ else
 end
 
 [uM.lipp,M_lipp] = setMeasurements(uM.curr_y,par,simP,par.noreflection,'lipp',...
-    M_curr,curr_SP, uem);
+    M_curr,curr_SP, uem_lipp);
 %%
 
 H = setmultOp(uin_lipp,M_curr,par,uem_lipp,curr_SP, simP);
@@ -68,7 +68,7 @@ else
 end
 
 Reg.setProxAlgo(par.bounds,par.prox_iter,par.xtolin,...
-    myOutputOpti(1,f_res.lipp,5,par.kdz,simP.n0,'Lipp',par.negative));
+    OutputOptiLipp(1,f_res.lipp,5,par.kdz,simP.n0,'Lipp',par.negative));
 Reg.optim.ItUpOut = 0;
 
 %%
@@ -103,8 +103,8 @@ for kk = 1:length(regul_set)
     FBS.mingam = FBS.gam/12;
     FBS.ItUpOut = par.ItUpOut;
     
-    %input = simP.n0*ones(par.siz);%choose this initialisation for Fresnel
-    input = setInput(n_hat.fbp,simP,par,par.siz,simP.n0);%Shepp-Logan
+    input = simP.n0*ones(par.siz);%choose this initialisation for Fresnel
+    %input = setInput(n_hat.fbp,simP,par,par.siz,simP.n0);%Shepp-Logan
     
     input = par.kdz^2*((input/simP.n0).^2 - 1);
     

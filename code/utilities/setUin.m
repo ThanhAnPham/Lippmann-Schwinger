@@ -117,6 +117,7 @@ switch par.uin
             CG.OutOp = OutputOpti(1,[],50);
             CG.maxiter = 5e3;
             CG.ItUpOut = 0;
+            CG.verbose = 0;
             CG.CvOp = TestCvgStepRelative(1e-9);
             CG.run(H'*b);
             

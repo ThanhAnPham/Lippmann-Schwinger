@@ -13,7 +13,7 @@ par.curr_siz = detSize(simP,par,'lipp');
 
 curr_SP = SP;
 if par.discreteGtild
-    uem_lipp = squeeze(zeros([M_curr.sizeout,par.Ntheta]));
+    uem_lipp = squeeze(zeros_([M_curr.sizeout,par.Ntheta]));
     for kk = 1:par.Ntheta
         uem_lipp(:,kk) = M_curr*uin_lipp(:,:,kk);
     end
@@ -22,7 +22,7 @@ else
         if ~hasandis(simP,'fresnel')
             curr_SP = SP;
             %such that it is at the end of a physical area of 2*par.distuM
-            curr_SP.z = par.Lzext*ones(curr_SP.Nmeas,1);%2*par.distuM*ones(curr_SP.Nmeas,1);
+            curr_SP.z = par.Lzext*ones_(curr_SP.Nmeas,1);%2*par.distuM*ones_(curr_SP.Nmeas,1);
         end
     else
         par.SP.Nmeas = length(par.SP.x);
@@ -64,7 +64,7 @@ if exist('f','var')
     dispG(f_res.lipp,n_gt.lipp,uin_lipp,uM.lipp,H.mapsCell{1}.G);
 else
     f_res.lipp = [];
-    n_gt.lipp = zeros(par.curr_siz);
+    n_gt.lipp = zeros_(par.curr_siz);
 end
 
 Reg.setProxAlgo(par.bounds,par.prox_iter,par.xtolin,...
@@ -103,7 +103,7 @@ for kk = 1:length(regul_set)
     FBS.mingam = FBS.gam/12;
     FBS.ItUpOut = par.ItUpOut;
     
-    input = simP.n0*ones(par.siz);%choose this initialisation for Fresnel
+    input = simP.n0*ones_(par.siz);%choose this initialisation for Fresnel
     %input = setInput(n_hat.fbp,simP,par,par.siz,simP.n0);%Shepp-Logan
     
     input = par.kdz^2*((input/simP.n0).^2 - 1);

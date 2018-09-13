@@ -13,9 +13,14 @@
 clear
 addpath(genpath('../'));
 set(0,'DefaultTextInterpreter','LaTex');
-%% Figure 7
 
+% -- To run on GPU (0: CPU / 1: Matlab Parrallel Computing Toolbox / 2: CudaMat) 
+useGPU(0)
 
+%% Figure 7 of [1]
 load('FoamDielExtTM_3_GHz_conj_1.mat');
+uin=gpuCpuConverter(uin);
+n=gpuCpuConverter(n);
+f=gpuCpuConverter(f);
 main_param_fig_7;
 main_lippmann;

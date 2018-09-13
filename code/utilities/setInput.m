@@ -33,4 +33,5 @@ else
     out = padarray(out,[0,(new_Nz - Nz1)/2],n0,'both');
 end
 
-out = imresize(out,siz_out,'box');
+%out = imresize(out,siz_out,'box');
+out = imresize(out,siz_out);

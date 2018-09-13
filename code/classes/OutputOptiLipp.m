@@ -135,8 +135,8 @@ classdef OutputOptiLipp < handle
         %% Initialization
         function init(this)
             this.count=1;
-            this.evolcost=[];
-            this.evolsnr=[];
+            this.evolcost=zeros_(1);
+            this.evolsnr=zeros_(1);
             this.nTimer = [];
             this.start = tic;
         end
@@ -182,7 +182,7 @@ classdef OutputOptiLipp < handle
                         if numel(this.evolcost)==numel(this.iternum)
                             plot(this.iternum-1,this.evolcost);
                         else
-                            plot(this.iternum(1:size(this.evolcost,1))-1,sum(this.evolcost,2));
+                            plot(this.iternum(1:size(this.evolcost,1))-1,real(sum(this.evolcost,2)));
                         end
                         %hold on;
                         subplot(122);

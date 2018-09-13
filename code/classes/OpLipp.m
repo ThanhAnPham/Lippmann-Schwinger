@@ -57,7 +57,7 @@ classdef OpLipp <  Map
             this.Niter = Niter;
             this.xtol = xtol;
             this.totalfield = totalfield;
-            this.f = zeros(this.sizein);
+            this.f = zeros_(this.sizein);
             this.u = Crp*uin;
         end
     end

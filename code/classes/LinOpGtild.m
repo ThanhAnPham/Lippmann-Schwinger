@@ -82,7 +82,7 @@ classdef LinOpGtild < LinOp
             Y = repmat(Y,[N(1),1]);
             this.setPos = [Y(:),X(:)];
             if this.stored
-                this.Gmat = zeros(this.Nsensors,prod(this.sizein));
+                this.Gmat = zeros_(this.Nsensors,prod(this.sizein));
             end
             this.maxR = 0;
             this.minR = inf;
@@ -123,7 +123,7 @@ classdef LinOpGtild < LinOp
             if this.stored
                 out = this.Gmat*input(:);
             else
-                out = zeros(this.Nsensors,1);
+                out = zeros_(this.Nsensors,1);
                 for kk = 1:this.Nsensors
                      
                     R = (sqrt(sum((repmat(this.SenPos(kk,:)./this.dN,[this.setCard,1])...
@@ -140,7 +140,7 @@ classdef LinOpGtild < LinOp
             if this.stored
                 out = reshape(this.Gmat'*input(:),this.sizein);
             else
-                out = zeros(this.setCard,1);
+                out = zeros_(this.setCard,1);
                 for kk = 1:this.setCard
                     R = (sqrt(sum((this.SenPos./this.dN...
                         - repmat(this.setPos(kk,:),[this.Nsensors,1])).^2,2))*this.dN...

@@ -1,14 +1,14 @@
 function [uin,varargout] = setUin(par,simP,algo,uinin,varargin)
 
 if nargout > 1
-    varargout{1} = [];
+    varargout{1} = zeros_(size(uinin(:,:,1)));
 end
 
 switch par.uin
     case 'sim'
         Nx = par.Nxext; Nz = par.Nzext;
         %uin_rytj = setUin(par.Nxext,par.Nzext,par.kdz,par,simP);
-        uin = zeros(Nx,Nz,par.Ntheta);
+        uin = zeros_(Nx,Nz,par.Ntheta);
         
         [ZZ,XX] = meshgrid(par.dz*(-Nz/2+1:Nz/2),...
             par.dx*(-Nx/2+1:Nx/2));
@@ -82,8 +82,8 @@ switch par.uin
         fprintf('%i cylindrical wave used to reconstruct Uin \n',2*Nc+1);
         [ZZ,XX] = meshgrid(((0:par.Nzext-1) - par.Nzext/2)*par.dz/fact,...
             ((0:par.Nxext-1) - par.Nxext/2)*par.dx/fact);
-        uin = zeros(par.Nxext,par.Nzext,par.Ntheta);
-        A = zeros(2*Nc + 1,par.Ntheta);
+        uin = zeros_(par.Nxext,par.Nzext,par.Ntheta);
+        A = zeros_(2*Nc + 1,par.Ntheta);
         
         vec_theta = find(ismember(simP.thetas,par.thetas));
         
@@ -105,7 +105,7 @@ switch par.uin
                 title('System');legend('Source','Sensors','ROI');
                 set(gca,'YDir','reverse','XDir','reverse');axis image;hold off;
             end
-            Hmat = zeros(Nsensors, 2*Nc + 1);
+            Hmat = zeros_(Nsensors, 2*Nc + 1);
             for n = -Nc:Nc
                 curr_H = besselh(n,1,par.k*fact*r_norm).*exp(1i*n*curr_theta);
                 Hmat(:,1 + n + Nc) = curr_H;%build operator

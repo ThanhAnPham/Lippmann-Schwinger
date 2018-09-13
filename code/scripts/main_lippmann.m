@@ -1,4 +1,5 @@
 %% MAIN 2D ManuLipp
+global isGPU
 
 fpath = createFolder(par.folder,'lipp',par.param_fname);%copy main_param in (newly created) folder
 
@@ -120,9 +121,15 @@ for kk = 1:length(regul_set)
     if isfield(simP,'dn')
         fname = sprintf('%s_dn_%1.2f',fname,simP.dn(end));
     end
+    if isGPU
+       fname = sprintf('%s_lipp_regul_%1.2e_Nx_%i_Nxext_%i_Nz_%i_Nzext_%i_iterin_%i_snr_%1.2f_gam_%1.2e.mat',...
+        fname,regul_set(kk),par.Nx,par.Nxext,par.Nz,par.Nzext,...
+        F.mapsCell{1}.H2.Niter,snr(gather(n_gt.lipp),gather(n_gt.lipp - n_hat.lipp)),FBS.gam);     
+    else
     fname = sprintf('%s_lipp_regul_%1.2e_Nx_%i_Nxext_%i_Nz_%i_Nzext_%i_iterin_%i_snr_%1.2f_gam_%1.2e.mat',...
         fname,regul_set(kk),par.Nx,par.Nxext,par.Nz,par.Nzext,...
         F.mapsCell{1}.H2.Niter,snr(n_gt.lipp,n_gt.lipp - n_hat.lipp),FBS.gam);
+    end
     fprintf('Saving data as %s...\nin %s\n',fname,fpath);
     OutOp = FBS.OutOp;
     save(fullfile(fpath,fname),'OutOp','input','par','n_hat','-v7.3');%,'FBS'

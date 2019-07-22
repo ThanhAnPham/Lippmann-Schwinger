@@ -71,7 +71,7 @@ classdef OpLipp <  Map
             
             this.CG = OptiConjGrad(A,b);
             this.CG.verbose = false;
-            this.CG.OutOp = OutputOpti(1,[],1);
+            this.CG.OutOp = OutputOpti(1,1);
             this.CG.ItUpOut = 0;
             this.CG.maxiter = this.Niter;
             this.CG.CvOp = TestCvgStepRelative(this.xtol);
@@ -105,7 +105,7 @@ classdef OpLipp <  Map
             
             CGgrad = OptiConjGrad(A,b);
             CGgrad.verbose = false;
-            CGgrad.OutOp = OutputOpti(1,[],1);
+            CGgrad.OutOp = OutputOpti(1,1);
             CGgrad.ItUpOut = 0;
             CGgrad.maxiter = this.Niter;
             CGgrad.CvOp = TestCvgStepRelative(this.xtol);

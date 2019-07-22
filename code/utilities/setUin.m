@@ -114,7 +114,7 @@ switch par.uin
             b = uinin(:,curr_iter);
             fprintf('%i unknowns, %i measurements\n',2*Nc+1,size(Hmat,1))
             b = H'*b;H = H'*H;CG = OptiConjGrad(H,b);
-            CG.OutOp = OutputOpti(1,[],50);
+            CG.OutOp = OutputOpti(1,50);
             CG.maxiter = 5e3;
             CG.ItUpOut = 0;
             CG.verbose = 0;

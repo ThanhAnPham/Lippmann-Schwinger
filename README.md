@@ -1,11 +1,28 @@
-# Lippmann-Schwinger
+# ODT with Lippmann-Schwinger model
 
-Matlab code for the paper 
+## Description
 
-<a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-25-18-21786" target="_blank">Efficient inversion of multiple-scattering model for optical diffraction tomography.</a>, <br />
-E. Soubies, T.-A. Pham, and M. Unser, Opt. Express 25, 21786–21800 (2017).
+This repository provides codes for 2D and 3D optical diffraction tomography (ODT) with iterative Lippmann-Schwinger model. More details can be found in the following paper:
 
-The code requires the GlobalBioIm library v1.1.1 https://biomedical-imaging-group.github.io/GlobalBioIm/
+[1] <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-25-18-21786" target="_blank">Efficient inversion of multiple-scattering model for optical diffraction tomography.</a>, <br />
+E. Soubies, T-a. Pham, and M. Unser, Opt. Express 25, 21786–21800 (2017).
 
-The script main_fig7 reproduces the figure 7 of the paper.
+[2] <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-25-18-21786" target="_blank">Three-Dimensional Optical Diffraction Tomographywith Lippmann-Schwinger Model.</a>, <br />
+T-a. Pham, E. Soubies, A. Ayoub, J. Lim, D. Psaltis, and M. Unser, IEEE Transactions on Computational Imaging (2020).
+
+## Requirements
+
+The code requires the GlobalBioIm library v1.1.2 (or more recent releases) https://biomedical-imaging-group.github.io/GlobalBioIm/
+
+## Repository content
+
+The repository is organized as follows.
+* Folder 2D: two-dimensional ODT [1]
+  * In folder code, the script **main_fig7.m** reproduces Figure 7 of [1].
+  * The folder mat_files contains data. 
+* Folder 3D: three-dimensional ODT [2]
+  * The script **DiscretizationGreen.m** reproduces Figure 3 of [2],
+  * **(comming soon)** The script **ExampleFwdModel.m** provides an example on how to use the iterative Lippmann-Schwinger forward model, 
+  * **(comming soon)** The script **Compute_uin.m** reproduces Figure 5 of [2],
+  * **(comming soon)** The script **ODT_Reconstruction.m** contains the whole reconstruction pipeline.
 

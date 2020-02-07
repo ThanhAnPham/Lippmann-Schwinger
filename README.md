@@ -5,14 +5,17 @@
 This repository provides codes for 2D and 3D optical diffraction tomography (ODT) with iterative Lippmann-Schwinger model. More details can be found in the following paper:
 
 [1] <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-25-18-21786" target="_blank">Efficient inversion of multiple-scattering model for optical diffraction tomography.</a>, <br />
-E. Soubies, T-a. Pham, and M. Unser, Opt. Express 25, 21786–21800 (2017).
+Optics Express, 25, 21786–21800 (2017), <br />
+E. Soubies, T-a. Pham, and M. Unser.
 
-[2] <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-25-18-21786" target="_blank">Three-Dimensional Optical Diffraction Tomographywith Lippmann-Schwinger Model.</a>, <br />
-T-a. Pham, E. Soubies, A. Ayoub, J. Lim, D. Psaltis, and M. Unser, IEEE Transactions on Computational Imaging (2020).
+[2] <a href="https://ieeexplore.ieee.org/document/8970570" target="_blank">Three-Dimensional Optical Diffraction Tomographywith Lippmann-Schwinger Model.</a>, <br />
+IEEE Transactions on Computational Imaging (2020), <br />
+T-a. Pham, E. Soubies, A. Ayoub, J. Lim, D. Psaltis, and M. Unser.
 
 ## Requirements
 
-The code requires the GlobalBioIm library v1.1.2 (or more recent releases) https://biomedical-imaging-group.github.io/GlobalBioIm/
+The code requires the GlobalBioIm library v1.1.2 (or more recent releases) <br />
+https://biomedical-imaging-group.github.io/GlobalBioIm/
 
 ## Repository content
 

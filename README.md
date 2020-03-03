@@ -8,7 +8,7 @@ This repository provides codes for 2D and 3D optical diffraction tomography (ODT
 Optics Express, 25, 21786–21800 (2017), <br />
 E. Soubies, T-a. Pham, and M. Unser.
 
-[2] <a href="https://ieeexplore.ieee.org/document/8970570" target="_blank">Three-Dimensional Optical Diffraction Tomographywith Lippmann-Schwinger Model.</a>, <br />
+[2] <a href="https://ieeexplore.ieee.org/document/8970570" target="_blank">Three-Dimensional Optical Diffraction Tomography with Lippmann-Schwinger Model.</a>, <br />
 IEEE Transactions on Computational Imaging (2020), <br />
 T-a. Pham, E. Soubies, A. Ayoub, J. Lim, D. Psaltis, and M. Unser.
 

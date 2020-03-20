@@ -22,6 +22,7 @@ https://biomedical-imaging-group.github.io/GlobalBioIm/
 The repository is organized as follows.
 * Folder 2D: two-dimensional ODT [1]
   * In folder code, the script **main_fig7.m** reproduces Figure 7 of [1].
+  * In folder code, the script **ExampleFwdModel.m** provides an example on how to use the iterative Lippmann-Schwinger forward model, 
   * The folder mat_files contains data. 
 * Folder 3D: three-dimensional ODT [2]
   * The script **DiscretizationGreen.m** reproduces Figure 3 of [2],

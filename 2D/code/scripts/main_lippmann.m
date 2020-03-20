@@ -96,12 +96,11 @@ for kk = 1:length(regul_set)
     FBS = OptiFBS(F,Reg);
     
     FBS.OutOp = OutOp;
-    FBS.reducedStep = par.redStep;
+    FBS.updateGam = 'reduced';
     FBS.maxiter = par.Niter;               % set maxiter (default 50)
     FBS.CvOp = TestCvgStepRelative(par.xtol);
     FBS.fista = true;                % activate FISTA
     FBS.gam = par.gam;
-    FBS.mingam = FBS.gam/12;
     FBS.ItUpOut = par.ItUpOut;
     
     input = simP.n0*ones_(par.siz);%choose this initialisation for Fresnel

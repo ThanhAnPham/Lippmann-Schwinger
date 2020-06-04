@@ -26,7 +26,7 @@ The repository is organized as follows.
   * The folder mat_files contains data. 
 * Folder 3D: three-dimensional ODT [2]
   * The script **DiscretizationGreen.m** reproduces Figure 3 of [2],
-  * **(coming soon)** The script **ExampleFwdModel.m** provides an example on how to use the iterative Lippmann-Schwinger forward model, 
-  * **(coming soon)** The script **Compute_uin.m** reproduces Figure 5 of [2],
-  * **(coming soon)** The script **ODT_Reconstruction.m** contains the whole reconstruction pipeline.
+  * The script **ExampleFwdModel.m** provides an example on how to use the iterative Lippmann-Schwinger forward model, 
+  * The script **Compute_uin.m** reproduces Figure 5 of [2],
+  * The script **ODT_Reconstruction.m** contains the whole reconstruction pipeline.
 

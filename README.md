@@ -29,4 +29,4 @@ The repository is organized as follows.
   * The script **ExampleFwdModel.m** provides an example on how to use the iterative Lippmann-Schwinger forward model, 
   * The script **Compute_uin.m** reproduces Figure 5 of [2],
   * The script **ODT_Reconstruction.m** contains the whole reconstruction pipeline.
-
+  **Note** The data for ODT_Reconstruction.m can be downloaded here: https://www.irit.fr/~Emmanuel.Soubies/Data/Data_LS3D.zip

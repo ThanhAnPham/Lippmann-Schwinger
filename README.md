@@ -12,6 +12,10 @@ E. Soubies, T-a. Pham, and M. Unser.
 IEEE Transactions on Computational Imaging (2020), <br />
 T-a. Pham, E. Soubies, A. Ayoub, J. Lim, D. Psaltis, and M. Unser.
 
+[3] <a href="https://www.sciencedirect.com/science/article/pii/S003040181930776X" target="_blank">A method for assessing the fidelity of optical diffraction tomography reconstruction methods using structured illumination.</a>, <br />
+Optics Communications, 454, 124486 (20209, <br />
+A. B. Ayoub, T-a. Pham, J. Lim, M. Unser, and D. Psaltis.
+
 ## Requirements
 
 The code requires the GlobalBioIm library v1.1.2 (or more recent releases) <br />
@@ -29,4 +33,5 @@ The repository is organized as follows.
   * The script **ExampleFwdModel.m** provides an example on how to use the iterative Lippmann-Schwinger forward model, 
   * The script **Compute_uin.m** reproduces Figure 5 of [2],
   * The script **ODT_Reconstruction.m** contains the whole reconstruction pipeline.
+  * The script **Assessment_method.m** implements the method of assessment of [3]
   **Note** The data for ODT_Reconstruction.m can be downloaded here: https://www.irit.fr/~Emmanuel.Soubies/Data/Data_LS3D.zip

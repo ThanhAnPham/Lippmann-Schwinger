@@ -251,6 +251,11 @@ classdef myOutputOpti < handle
                         subplot(122);
                         plot(this.iternum,this.evolcost);axis equal;
                     else
+                        if ~isempty(this.xtrue)
+                            cax = [min(this.xtrue(:)),max(this.xtrue(:))];
+                        else
+                            cax = gather([min(opti.xopt(:)), max(opti.xopt(:))]);
+                        end
                         if isempty(this.pos)
                             this.pos = ceil(size(opti.xopt)/2);
                         end
@@ -265,13 +270,13 @@ classdef myOutputOpti < handle
                             %hold on;
                             subplot(221);
                             imagesc(squeeze(opti.xopt(:,:,this.pos(3))));
-                            colorbar;axis image;title('XY');caxis(gather([min(opti.xopt(:)), max(opti.xopt(:))]));
+                            colorbar;axis image;title('XY');caxis(cax);
                             subplot(222);
                             imagesc(squeeze(opti.xopt(:,this.pos(2),:)));
-                            colorbar;axis image;title('XZ');caxis(gather([min(opti.xopt(:)), max(opti.xopt(:))]));
+                            colorbar;axis image;title('XZ');caxis(cax);
                             subplot(223);
                             imagesc(squeeze(opti.xopt(this.pos(1),:,:))');
-                            colorbar;axis image;title('ZY');caxis(gather([min(opti.xopt(:)), max(opti.xopt(:))]));
+                            colorbar;axis image;title('ZY');caxis(cax);
                             if this.negative
                                 colormap(flipud(viridis));
                             end
@@ -281,13 +286,13 @@ classdef myOutputOpti < handle
                                 %hold on;
                                 subplot(221);
                                 imagesc(squeeze(opti.xopt(:,:,this.pos(3))));
-                                colorbar;axis image;title('XY');caxis(gather([min(opti.xopt(:)), max(opti.xopt(:))]));
+                                colorbar;axis image;title('XY');caxis(cax);
                                 subplot(222);
                                 imagesc(squeeze(opti.xopt(:,this.pos(2),:)));
-                                colorbar;axis image;title('XZ');caxis(gather([min(opti.xopt(:)), max(opti.xopt(:))]));
+                                colorbar;axis image;title('XZ');caxis(cax);
                                 subplot(223);
                                 imagesc(squeeze(opti.xopt(this.pos(1),:,:))');
-                                colorbar;axis image;title('ZY');caxis(gather([min(opti.xopt(:)), max(opti.xopt(:))]));
+                                colorbar;axis image;title('ZY');caxis(cax);
                                 if this.negative
                                     colormap(flipud(viridis));
                                 end

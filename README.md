@@ -33,8 +33,9 @@ The repository is organized as follows.
   * The script **ExampleFwdModel.m** provides an example on how to use the iterative Lippmann-Schwinger forward model, 
   * The script **Compute_uin.m** reproduces Figure 5 of [2],
   * The script **ODT_Reconstruction.m** contains the whole reconstruction pipeline.
-  * The script **Assessment_method.m** implements the method of assessment of [3].\
-  * **Notes**
+  * The script **Assessment_method.m** implements the method of assessment of [3].
+  
+  **Notes**
     * The data for ODT_Reconstruction.m can be downloaded [here](https://www.irit.fr/~Emmanuel.Soubies/Data/Data_LS3D.zip)\
     * ODT_Reconstruction takes ~6h on CPU (Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz).\
     * ODT_Reconstruction takes ~1h30 on GPU (Nvidia GeForce GTX Titan X).

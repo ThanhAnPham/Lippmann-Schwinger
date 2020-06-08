@@ -37,7 +37,6 @@ The repository is organized as follows.
   
   
   **Notes**
-  
-            The data for ODT_Reconstruction.m can be downloaded here: https://www.irit.fr/~Emmanuel.Soubies/Data/Data_LS3D.zip       
-            ODT_Reconstruction takes ~6h on CPU (Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz).
+            The data for ODT_Reconstruction.m can be downloaded here: https://www.irit.fr/~Emmanuel.Soubies/Data/Data_LS3D.zip 
+            ODT_Reconstruction takes ~6h on CPU (Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz). 
             ODT_Reconstruction takes ~1h30 on GPU (Nvidia GeForce GTX Titan X).

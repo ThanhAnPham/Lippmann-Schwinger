@@ -115,7 +115,7 @@ classdef LinOpTiltedPropagator <  LinOp
             [mu,mv] =  meshgrid(  u.^2,  v.^2);
             Mesh = mv + mu;
             
-            if 0%(max(Mesh(:))>(n0/ lambda)^2)
+            if (max(Mesh(:))>(n0/ lambda)^2)
                 mod =  (Mesh<= (n0/ lambda)^2);
                 Mesh(~mod)=0.;
             else
